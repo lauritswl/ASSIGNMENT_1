@@ -33,10 +33,6 @@ knitr::opts_knit$set(root.dir = 'C:/Users/Annes/OneDrive - Aarhus universitet/Me
 # Loading packages
 pacman::p_load(tidyverse)
 ```
-```
-
-
-
 
 The objective of this warm-up assignment is to brush up your programming and data wrangling skills as well as to introduce you to the data set you will be working on in Assignment 1. More precisely, you will here be asked here to do the following:
 
@@ -102,8 +98,9 @@ Load the following three data sets, after downloading them from dropbox and savi
 
 ```{r import_datasets, message = FALSE}
 ### Write your code here
-
-
+LU_train <- read.csv('LU_train.csv')
+demo_train <- read.csv('demo_train.csv')
+token_train <- read.csv('token_train.csv')
 ```
 
 Using various visualisation and aggregation procedures, explore these data sets and try to compare them to each other and draw parallel. You'll quickly notice that this is not an easy task. This is in part due to the fact that the different data sets were built by different researchers at different points in time. In particular, you'll find out that: 
@@ -129,8 +126,8 @@ Many different procedures can be used here, and unless you have to deal with gig
 
 ```{r rename_variables}
 ### Write your code here
-
-
+names(demo_train)[1] <-'SUBJ'
+names(demo_train)[2] <- 'VISIT'
 ```
 
 **2. Renaming values**
@@ -140,6 +137,7 @@ Find a way to homogenize the way "visit" is reported amongst the different datas
 
 ```{r extract_digits}
 ### Write your code here
+LU_train$VISIT <- str_replace_all(LU_train$VISIT, "visit","")
 
 
 ```
