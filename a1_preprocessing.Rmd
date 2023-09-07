@@ -73,8 +73,8 @@ If you have created a Rstudio project for this assignment, the working directory
 
 ```{r setup}
 ### Write your code here
-
-
+library("tidyverse")
+library("ggplot2")
 ```
 
 Load the following three data sets, after downloading them from dropbox and saving them in your working directory:
