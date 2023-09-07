@@ -73,8 +73,11 @@ If you have created a Rstudio project for this assignment, the working directory
 
 ```{r setup}
 ### Write your code here
+setwd(".")
+getwd()
 
-
+library(ggplot2)
+library(tidyverse)
 ```
 
 Load the following three data sets, after downloading them from dropbox and saving them in your working directory:
@@ -85,7 +88,9 @@ Load the following three data sets, after downloading them from dropbox and savi
 
 ```{r import_datasets, message = FALSE}
 ### Write your code here
-
+demograph_train <- read.csv("~/GitHub/ASSIGNMENT_1/Methods_3/demo_train.csv")
+length_ut_train <- read.csv("~/GitHub/ASSIGNMENT_1/Methods_3/LU_train.csv")
+word_data <- read.csv("~/GitHub/ASSIGNMENT_1/Methods_3/token_train.csv")
 
 ```
 
